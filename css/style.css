@@ -129,6 +129,25 @@ body {
     color: var(--logo-color);
 }
 
+.contacts {
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);}
+
+.current {
+    color: var(--second-link-color);
+    position: relative;
+}
+
+.current::after {
+    content: "";
+    width: 100%;
+    height: 4px;
+    position: absolute;
+    background-color: #2196F3;
+    left: 0;
+    bottom: -32px;
+    border-radius: 2px;
+}
+
 .header-link_mail {
     font-family: Roboto;
     font-style: normal;
@@ -280,6 +299,25 @@ a {
     letter-spacing: 0.03em;
     color: var(--about);
 }
+.about-item{
+    position: relative;
+}
+.about-text{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font-size: 14px;
+    line-height: 1.14;
+    color: #ffffff;
+    font-weight: 700;
+    text-align: center;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    background: rgba(47, 48, 58, 0.8);
+    padding: 27px 82px;
+    width: 100%;
+}
+
 /* team section */
 
 .team-section {
@@ -501,6 +539,36 @@ box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1p
     line-height: 1.87;
     letter-spacing: 0.03em;
     color: var(--main-description);
+}
+.main-servies-name{
+    position: relative;
+    overflow: hidden;
+}
+
+.main-img{
+    margin-left: 30px;
+    margin-top: 30px;
+    flex-basis: calc(100% / 3 - 30px);
+    position: relative;
+}
+
+.main-img:focus .main-top-text,
+.main-img:hover .main-top-text{
+transform: translateY(0%);
+}
+.main-top-text{
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 18px;
+    line-height: 1.5;
+    color: #ffffff;
+    font-weight: 400;
+    background-color: rgba(33, 150, 243, 0.9);
+    padding: 63px 24px;
+    height: 100%;
+    transform: translateY(100%);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Footer section */
